@@ -77,23 +77,6 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
---- !u!114 &2007235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2586c8e41f35d2f4fadde53020bf4207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go: {fileID: 1931539505}
-  thisPropertyPath: MouseLook.enabled
-  compareToType: 1
-  other: {fileID: 0}
-  otherPropertyPath: 
-  constantValueGeneric: 1
 --- !u!1 &5089170
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +967,7 @@ MonoBehaviour:
   repeatEveryFrame: 1
   hasFailed: 0
   checkMethods: 6
-  m_ActionBase: {fileID: 1566866871}
+  m_ActionBase: {fileID: 0}
   checksPerformed: 0
 --- !u!114 &290536749
 MonoBehaviour:
@@ -1005,7 +988,7 @@ MonoBehaviour:
   repeatEveryFrame: 1
   hasFailed: 0
   checkMethods: 2
-  m_ActionBase: {fileID: 1440729544}
+  m_ActionBase: {fileID: 0}
   checksPerformed: 0
 --- !u!114 &290536750
 MonoBehaviour:
@@ -1026,7 +1009,7 @@ MonoBehaviour:
   repeatEveryFrame: 1
   hasFailed: 0
   checkMethods: 2
-  m_ActionBase: {fileID: 1277433556}
+  m_ActionBase: {fileID: 0}
   checksPerformed: 0
 --- !u!1 &429006099
 GameObject:
@@ -1679,7 +1662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec70ea62423844919d92818842be902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshairTexture: {fileID: 2800000, guid: bad11e9dc65dd4cf79a86818d633df5d, type: 3}
+  crosshairTexture: {fileID: 2800000, guid: 1eb770a7a48f849fe917512549553b5b, type: 3}
   position:
     serializedVersion: 2
     x: 0
@@ -2370,23 +2353,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1234079302}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1277433556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2586c8e41f35d2f4fadde53020bf4207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go: {fileID: 290536736}
-  thisPropertyPath: MouseLook.enabled
-  compareToType: 1
-  other: {fileID: 0}
-  otherPropertyPath: 
-  constantValueGeneric: 1
 --- !u!1 &1280684322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,6 +2396,7 @@ GameObject:
   - 4: {fileID: 1291003485}
   - 108: {fileID: 1291003484}
   - 114: {fileID: 1291003486}
+  - 123: {fileID: 1291003487}
   m_Layer: 0
   m_Name: SunLight
   m_TagString: Untagged
@@ -2497,6 +2464,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1169839774}
+--- !u!123 &1291003487
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291003483}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1296309503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,23 +2727,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1429632721}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1440729544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2586c8e41f35d2f4fadde53020bf4207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go: {fileID: 290536736}
-  thisPropertyPath: AudioSource.enabled
-  compareToType: 1
-  other: {fileID: 0}
-  otherPropertyPath: 
-  constantValueGeneric: 1
 --- !u!1 &1443129717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,25 +3088,6 @@ Transform:
   - {fileID: 1685301664}
   m_Father: {fileID: 2059252784}
   m_RootOrder: 2
---- !u!114 &1566866871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4928c6c2b973874c8d4e6c9a69bb5b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go: {fileID: 290536736}
-  thisPropertyPath: Transform.position.y
-  compareToType: 1
-  other: {fileID: 0}
-  otherPropertyPath: 
-  constantValueGeneric: 0
-  compareTypes: 2
-  floatingPointError: 9.9999997473787516e-05
 --- !u!1 &1629040650
 GameObject:
   m_ObjectHideFlags: 0
@@ -3654,7 +3600,7 @@ MonoBehaviour:
   repeatEveryFrame: 1
   hasFailed: 0
   checkMethods: 2
-  m_ActionBase: {fileID: 2007235}
+  m_ActionBase: {fileID: 0}
   checksPerformed: 0
 --- !u!1 &2054797398
 GameObject:

@@ -9,10 +9,8 @@ function SelectCamera (index : int) {
     	// Activate the selected camera
         if (i == index){
         	cameras[i].gameObject.SetActive(true);
-//            cameras[i].camera.active = true;
     	// Deactivate all other cameras
         } else {
-//    	    cameras[i].camera.active = false;
     	    cameras[i].gameObject.SetActive(false);
 	    }
  

@@ -8,7 +8,7 @@ public class GUICrossHair : MonoBehaviour
 	public Texture crosshairTexture;
 
 	// RO Position in the GUI for the crosshair.
-	public Rect position;
+	private Rect position;
 
 	// Use to make cross hair visible
 	public bool visible = true;

@@ -89,6 +89,7 @@ GameObject:
   - 65: {fileID: 5089173}
   - 23: {fileID: 5089172}
   - 114: {fileID: 5089175}
+  - 114: {fileID: 5089176}
   m_Layer: 0
   m_Name: DoorFrame
   m_TagString: Untagged
@@ -159,6 +160,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: Door
+--- !u!114 &5089176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5089170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927f0dc98600f41e88fbfbdb3033c368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorHinge: {fileID: 1202881646}
+  state: 1
 --- !u!1 &43644646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,12 +1625,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshairTexture: {fileID: 2800000, guid: 1eb770a7a48f849fe917512549553b5b, type: 3}
-  position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
   visible: 1
 --- !u!4 &786688954
 Transform:

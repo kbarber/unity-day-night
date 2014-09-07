@@ -2,20 +2,24 @@
 using System.Collections;
 
 [AddComponentMenu("DN/Look At")]
-public class LookAt : MonoBehaviour {
+public class LookAt : MonoBehaviour
+{
 
 	// Target object to look at
 	public Transform target;
 
-	void DoLookAt () {
-		transform.LookAt(target);
+	void DoLookAt ()
+	{
+		transform.LookAt (target);
 	}
 
-	void Start () {
-		DoLookAt();
+	void Start ()
+	{
+		DoLookAt ();
 	}
 	
-	void Update () {
-		DoLookAt();
+	void Update ()
+	{
+		DoLookAt ();
 	}
 }

@@ -88,6 +88,7 @@ GameObject:
   - 33: {fileID: 5089174}
   - 65: {fileID: 5089173}
   - 23: {fileID: 5089172}
+  - 114: {fileID: 5089175}
   m_Layer: 0
   m_Name: DoorFrame
   m_TagString: Untagged
@@ -146,6 +147,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5089170}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5089175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5089170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe1530b33e234074a2c46d8058efa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: Door
 --- !u!1 &43644646
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,9 +713,6 @@ GameObject:
   - 114: {fileID: 290536745}
   - 82: {fileID: 290536746}
   - 114: {fileID: 290536747}
-  - 114: {fileID: 290536748}
-  - 114: {fileID: 290536749}
-  - 114: {fileID: 290536750}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -948,69 +958,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicOn: 1
   audioSource: {fileID: 0}
---- !u!114 &290536748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 290536736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bafa54482a87ac4cbd7ff1bfd1ac93a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkAfterTime: 1
-  repeatCheckTime: 1
-  repeatEveryTime: 1
-  checkAfterFrames: 100
-  repeatCheckFrame: 1
-  repeatEveryFrame: 1
-  hasFailed: 0
-  checkMethods: 6
-  m_ActionBase: {fileID: 0}
-  checksPerformed: 0
---- !u!114 &290536749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 290536736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bafa54482a87ac4cbd7ff1bfd1ac93a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkAfterTime: 1
-  repeatCheckTime: 1
-  repeatEveryTime: 1
-  checkAfterFrames: 1
-  repeatCheckFrame: 1
-  repeatEveryFrame: 1
-  hasFailed: 0
-  checkMethods: 2
-  m_ActionBase: {fileID: 0}
-  checksPerformed: 0
---- !u!114 &290536750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 290536736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bafa54482a87ac4cbd7ff1bfd1ac93a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkAfterTime: 1
-  repeatCheckTime: 1
-  repeatEveryTime: 1
-  checkAfterFrames: 1
-  repeatCheckFrame: 1
-  repeatEveryFrame: 1
-  hasFailed: 0
-  checkMethods: 2
-  m_ActionBase: {fileID: 0}
-  checksPerformed: 0
 --- !u!1 &429006099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,8 +1591,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 786688954}
   - 114: {fileID: 786688953}
+  - 114: {fileID: 786688955}
   m_Layer: 0
-  m_Name: CrossHairs
+  m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1669,7 +1617,7 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
-  OriginalOn: 1
+  visible: 1
 --- !u!4 &786688954
 Transform:
   m_ObjectHideFlags: 0
@@ -1682,6 +1630,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 290536743}
   m_RootOrder: 2
+--- !u!114 &786688955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786688952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ff4db53d7fa48599e1a11a690cbbaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getAimedObjectHandler: {fileID: 1931539514}
+  aimedLabel: 
 --- !u!1 &866914792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2578,7 +2539,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: aebcc995429c2428ebfc6fb6f502d052, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3474,8 +3435,8 @@ GameObject:
   - 92: {fileID: 1931539507}
   - 81: {fileID: 1931539506}
   - 114: {fileID: 1931539511}
-  - 114: {fileID: 1931539513}
   - 123: {fileID: 1931539512}
+  - 114: {fileID: 1931539514}
   m_Layer: 0
   m_Name: 1st Person Camera
   m_TagString: Untagged
@@ -3581,7 +3542,7 @@ LensFlare:
     serializedVersion: 2
     m_Bits: 6
   m_Directional: 0
---- !u!114 &1931539513
+--- !u!114 &1931539514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3589,19 +3550,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1931539505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bafa54482a87ac4cbd7ff1bfd1ac93a, type: 3}
+  m_Script: {fileID: 11500000, guid: 979af3581faf14d709852f3c038c0dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkAfterTime: 1
-  repeatCheckTime: 1
-  repeatEveryTime: 1
-  checkAfterFrames: 1
-  repeatCheckFrame: 1
-  repeatEveryFrame: 1
-  hasFailed: 0
-  checkMethods: 2
-  m_ActionBase: {fileID: 0}
-  checksPerformed: 0
+  objectHit: {fileID: 0}
+  objectInteractive: {fileID: 0}
+  objectLabel: 
 --- !u!1 &2054797398
 GameObject:
   m_ObjectHideFlags: 0

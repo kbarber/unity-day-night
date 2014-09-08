@@ -13,7 +13,7 @@ public class DoorFrameAction : MonoBehaviour
 	/* Open door */
 	void doAction ()
 	{
-		print ("Opening Door");
+		print ("Door Action");
 		if (doorOpen) {
 			/* Door is opened, close it */
 			doorHinge.Rotate (new Vector3 (0, 90, 0));

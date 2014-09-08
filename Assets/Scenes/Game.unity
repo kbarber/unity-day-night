@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorHinge: {fileID: 1202881646}
-  state: 1
+  doorOpen: 1
 --- !u!1 &43644646
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,12 +895,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 290536736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b3b4220c0ff14641bbd5846bfbb6a64, type: 3}
+  m_Script: {fileID: 11500000, guid: 8efe6de52ebab4dfcb99f150f8d1b1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameras:
   - {fileID: 1931539509}
   - {fileID: 1517058034}
+  activeCamera: 0
 --- !u!82 &290536746
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2528,6 +2529,8 @@ GameObject:
   - 33: {fileID: 1316149730}
   - 135: {fileID: 1316149729}
   - 23: {fileID: 1316149728}
+  - 114: {fileID: 1316149732}
+  - 114: {fileID: 1316149733}
   m_Layer: 0
   m_Name: Ceiling Light
   m_TagString: Untagged
@@ -2587,6 +2590,31 @@ Transform:
   - {fileID: 990175227}
   m_Father: {fileID: 2059252784}
   m_RootOrder: 5
+--- !u!114 &1316149732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1316149727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe1530b33e234074a2c46d8058efa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: Light
+--- !u!114 &1316149733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1316149727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5485357be4864b598cc8e80c8196e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSource: {fileID: 990175226}
+  lightOn: 0
 --- !u!1001 &1316164461
 Prefab:
   m_ObjectHideFlags: 0

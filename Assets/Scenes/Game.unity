@@ -2216,6 +2216,7 @@ GameObject:
   - 4: {fileID: 1169839774}
   - 114: {fileID: 1169839775}
   - 114: {fileID: 1169839776}
+  - 114: {fileID: 1169839777}
   m_Layer: 0
   m_Name: MapCenter
   m_TagString: Untagged
@@ -2268,6 +2269,19 @@ MonoBehaviour:
   cameraToAdjust: {fileID: 1931539509}
   dayColor: {r: .529411793, g: .807843149, b: .921568632, a: 1}
   nightColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &1169839777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169839773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678546467fe7542dd89efe8c9465555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sunLight: {fileID: 1291003484}
+  rotateUniverse: {fileID: 1169839775}
 --- !u!1 &1201492536
 GameObject:
   m_ObjectHideFlags: 0

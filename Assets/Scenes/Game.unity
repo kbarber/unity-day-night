@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canControl: 1
-  useFixedUpdate: 1
+  useFixedUpdate: 0
   movement:
     maxForwardSpeed: 8
     maxSidewaysSpeed: 6

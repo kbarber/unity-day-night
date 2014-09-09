@@ -2,6 +2,7 @@
 using System.Collections;
 
 [AddComponentMenu("DN/Get Aimed Object")]
+[RequireComponent (typeof(Camera))]
 public class GetAimedObject : MonoBehaviour
 {
 

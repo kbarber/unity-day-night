@@ -10,22 +10,20 @@ public class MaterialValuesCopier : ScriptableObject
 	private static float frezvalue;
 	
 
-    [MenuItem ("Hard Surface / Set Fresnel Reflection Value to 1.13 range")]
-    static void DoRecord()
-    {
+	[MenuItem ("Hard Surface / Set Fresnel Reflection Value to 1.13 range")]
+	static void DoRecord ()
+	{
     	
-    	foreach (Material m in Selection.GetFiltered(typeof(Material), SelectionMode.DeepAssets))
-        {
-        	Undo.RegisterUndo (m, "Material Copy Change");
+		foreach (Material m in Selection.GetFiltered(typeof(Material), SelectionMode.DeepAssets)) {
+			Undo.RecordObject (m, "Material Copy Change");
         	        	
-        	if(m.HasProperty("_FrezPow"))
-			{
-        		frezvalue = m.GetFloat("_FrezPow");
+			if (m.HasProperty ("_FrezPow")) {
+				frezvalue = m.GetFloat ("_FrezPow");
 				frezvalue *= 0.0009765625f;
-				m.SetFloat("_FrezPow", frezvalue );
+				m.SetFloat ("_FrezPow", frezvalue);
 			}
 		
 		}
-    }
+	}
  
-   }
+}

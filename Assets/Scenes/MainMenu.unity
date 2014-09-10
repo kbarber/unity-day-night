@@ -100,7 +100,7 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: Start Game
-  m_Anchor: 1
+  m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
@@ -125,7 +125,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &16465768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,10 +134,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 16465765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c978f847973e54b9ab336cb46956c9fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 11cfc04be2c824ec285ecc80c9fcd8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: Start
+  buttonType: 0
 --- !u!1 &256162058
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +148,6 @@ GameObject:
   - 4: {fileID: 256162063}
   - 20: {fileID: 256162062}
   - 92: {fileID: 256162061}
-  - 124: {fileID: 256162060}
   - 81: {fileID: 256162059}
   - 82: {fileID: 256162064}
   m_Layer: 0
@@ -160,13 +159,6 @@ GameObject:
   m_IsActive: 1
 --- !u!81 &256162059
 AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 256162058}
-  m_Enabled: 1
---- !u!124 &256162060
-Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -187,8 +179,8 @@ Camera:
   m_GameObject: {fileID: 256162058}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: .00043252678, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -281,53 +273,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!1 &660188841
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 660188843}
-  - 131: {fileID: 660188842}
-  m_Layer: 0
-  m_Name: Menu Texture
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!131 &660188842
-GUITexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 660188841}
-  m_Enabled: 1
-  m_Texture: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: .501960814}
-  m_PixelInset:
-    serializedVersion: 2
-    x: -64
-    y: -29
-    width: 128
-    height: 58
-  m_LeftBorder: 0
-  m_RightBorder: 0
-  m_TopBorder: 0
-  m_BottomBorder: 0
---- !u!4 &660188843
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 660188841}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .5, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
 --- !u!1 &947401272
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +299,7 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: Quit
-  m_Anchor: 1
+  m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
@@ -379,7 +324,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &947401275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,7 +333,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 947401272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c978f847973e54b9ab336cb46956c9fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 11cfc04be2c824ec285ecc80c9fcd8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: Quit
+  buttonType: 1

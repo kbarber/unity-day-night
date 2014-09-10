@@ -4,20 +4,31 @@ using System.Collections;
 [AddComponentMenu("DN/Rotate Universe")]
 public class RotateUniverse : MonoBehaviour
 {
-	// How many degrees per second to move the sun & moon
-	public int degreesPerSecond = 10;
+	[Tooltip("Degrees per second to move the sun & moon.")]
+	[Range(0, 90)]
+	public int
+		degreesPerSecond = 10;
 
-	// Time of the world, from 0 to maximumTime
-	public float worldTime;
+	[Header("Time Scale Controls")]
 
-	// Maximum time
-	public float maximumWorldTime = 100;
+	[Tooltip("Maximum time scale.")]
+	public int
+		maximumTimeScale = 100;
 
-	// Starting Position
-	public float startingTime = 0.25f;
+	[Tooltip("% of day completed when starting rotation.")]
+	[Range(0, 100)]
+	public int
+		startingPercent = 25;
 
-	// Day?
-	public bool isDay;
+	[Header("Read-only settings")]
+
+	[Tooltip("RO: Returns true if it is day.")]
+	public bool
+		isDay;
+
+	[Tooltip("RO: Current time of the world.")]
+	public float
+		worldTime;
 
 	private void Rotate ()
 	{
@@ -25,14 +36,14 @@ public class RotateUniverse : MonoBehaviour
 		transform.Rotate (0, 0, Time.deltaTime * degreesPerSecond);
 	}
 
-	/* Here we convert the rotation of the world into time */
-	private static float RotationToWorldTime (float eulerAngle, float maxTime, float startTime)
+	private static float RotationToWorldTime (float eulerAngle, int maxTime, int startPercent)
 	{
 		float rotationCalc = eulerAngle / 360 * maxTime;
+		float startTime = startPercent / 100;
 		return ((maxTime * startTime) + rotationCalc) % maxTime;
 	}
 
-	private static bool calcDay (float currentTime, float maxTime)
+	private static bool calcDay (float currentTime, int maxTime)
 	{
 		if (currentTime < (maxTime / 2)) {
 			return true;
@@ -43,8 +54,8 @@ public class RotateUniverse : MonoBehaviour
 
 	private void UpdateWorldTime ()
 	{
-		worldTime = RotationToWorldTime (transform.rotation.eulerAngles.z, maximumWorldTime, startingTime);
-		isDay = calcDay (worldTime, maximumWorldTime);
+		worldTime = RotationToWorldTime (transform.rotation.eulerAngles.z, maximumTimeScale, startingPercent);
+		isDay = calcDay (worldTime, maximumTimeScale);
 	}
 
 	void Start ()

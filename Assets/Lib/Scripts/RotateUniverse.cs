@@ -4,7 +4,7 @@ using System.Collections;
 [AddComponentMenu("DN/Rotate Universe")]
 public class RotateUniverse : MonoBehaviour
 {
-	[Tooltip("Degrees per second to move the sun & moon.")]
+	[Tooltip("Degrees per second to rotate the universe.")]
 	[Range(0, 90)]
 	public int
 		degreesPerSecond = 10;
@@ -15,7 +15,8 @@ public class RotateUniverse : MonoBehaviour
 	public int
 		maximumTimeScale = 100;
 
-	[Tooltip("% of day completed when starting rotation.")]
+	[Tooltip("% of rotation completed when script starts. For example, if your sun starts at the sunrise location, " + 
+	         "then use zero. If it starts at the top of the sky (midday), then use 25%.")]
 	[Range(0, 100)]
 	public int
 		startingPercent = 25;
@@ -27,7 +28,7 @@ public class RotateUniverse : MonoBehaviour
 		isDay;
 
 	[Tooltip("RO: Current time of the world.")]
-	public float
+	public int
 		worldTime;
 
 	private void Rotate ()
@@ -36,16 +37,16 @@ public class RotateUniverse : MonoBehaviour
 		transform.Rotate (0, 0, Time.deltaTime * degreesPerSecond);
 	}
 
-	private static float RotationToWorldTime (float eulerAngle, int maxTime, int startPercent)
+	private static int RotationToWorldTime (float eulerAngle, int maxTime, int startingPercent)
 	{
-		float rotationCalc = eulerAngle / 360 * maxTime;
-		float startTime = startPercent / 100;
-		return ((maxTime * startTime) + rotationCalc) % maxTime;
+		float rotationCalc = (eulerAngle / 360f) * maxTime;
+		float startTime = startingPercent / 100f;
+		return Mathf.RoundToInt ((maxTime * startTime) + rotationCalc) % maxTime;
 	}
 
 	private static bool calcDay (float currentTime, int maxTime)
 	{
-		if (currentTime < (maxTime / 2)) {
+		if (currentTime < (maxTime / 2f)) {
 			return true;
 		} else {
 			return false;

@@ -2738,6 +2738,8 @@ MonoBehaviour:
   cameraToAdjust: {fileID: 1931539509}
   dayColor: {r: .529411793, g: .807843149, b: .921568632, a: 1}
   nightColor: {r: 0, g: 0, b: 0, a: 1}
+  nightSkybox: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
+  daySkybox: {fileID: 0}
 --- !u!114 &1169839777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4397,6 +4399,7 @@ GameObject:
   - 81: {fileID: 1931539506}
   - 114: {fileID: 1931539511}
   - 114: {fileID: 1931539514}
+  - 45: {fileID: 1931539512}
   m_Layer: 0
   m_Name: 1st Person Camera
   m_TagString: Untagged
@@ -4487,6 +4490,14 @@ MonoBehaviour:
   maximumX: 360
   minimumY: -89
   maximumY: 89
+--- !u!45 &1931539512
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931539505}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
 --- !u!114 &1931539514
 MonoBehaviour:
   m_ObjectHideFlags: 0

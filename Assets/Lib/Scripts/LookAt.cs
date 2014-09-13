@@ -18,7 +18,7 @@ public class LookAt : MonoBehaviour
 		DoLookAt ();
 	}
 	
-	void Update ()
+	void LateUpdate ()
 	{
 		DoLookAt ();
 	}

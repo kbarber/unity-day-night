@@ -184,6 +184,7 @@ GameObject:
   - 33: {fileID: 19327319}
   - 23: {fileID: 19327318}
   - 95: {fileID: 19327317}
+  - 64: {fileID: 19327320}
   m_Layer: 0
   m_Name: CrossT
   m_TagString: Untagged
@@ -249,6 +250,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1379219882}
   m_GameObject: {fileID: 19327315}
+  m_Mesh: {fileID: 4300000, guid: 6843d2f01c8c5ea4ea5382c02e7af57c, type: 3}
+--- !u!64 &19327320
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19327315}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 6843d2f01c8c5ea4ea5382c02e7af57c, type: 3}
 --- !u!1 &30036601
 GameObject:
@@ -330,6 +344,7 @@ GameObject:
   - 33: {fileID: 31678207}
   - 23: {fileID: 31678206}
   - 95: {fileID: 31678205}
+  - 64: {fileID: 31678208}
   m_Layer: 0
   m_Name: Street1Lane30m
   m_TagString: Untagged
@@ -394,6 +409,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1006591683}
   m_GameObject: {fileID: 31678203}
+  m_Mesh: {fileID: 4300000, guid: 78613a3680295b4419a1b2326caf113c, type: 3}
+--- !u!64 &31678208
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 31678203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 78613a3680295b4419a1b2326caf113c, type: 3}
 --- !u!1 &43644646
 GameObject:
@@ -514,6 +542,7 @@ GameObject:
   - 33: {fileID: 62256729}
   - 23: {fileID: 62256728}
   - 95: {fileID: 62256727}
+  - 64: {fileID: 62256730}
   m_Layer: 0
   m_Name: Street1Lane30m
   m_TagString: Untagged
@@ -578,6 +607,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1757141494}
   m_GameObject: {fileID: 62256725}
+  m_Mesh: {fileID: 4300000, guid: 78613a3680295b4419a1b2326caf113c, type: 3}
+--- !u!64 &62256730
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 62256725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 78613a3680295b4419a1b2326caf113c, type: 3}
 --- !u!1 &91492620
 GameObject:
@@ -803,6 +845,7 @@ GameObject:
   - 33: {fileID: 162907307}
   - 23: {fileID: 162907306}
   - 95: {fileID: 162907305}
+  - 64: {fileID: 162907309}
   m_Layer: 0
   m_Name: Street1Lane30m
   m_TagString: Untagged
@@ -868,6 +911,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2057664693}
   m_RootOrder: 1
+--- !u!64 &162907309
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162907304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 78613a3680295b4419a1b2326caf113c, type: 3}
 --- !u!1 &207951321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,9 +1347,9 @@ MonoBehaviour:
   canControl: 1
   useFixedUpdate: 0
   movement:
-    maxForwardSpeed: 8
-    maxSidewaysSpeed: 6
-    maxBackwardsSpeed: 6
+    maxForwardSpeed: 10
+    maxSidewaysSpeed: 8
+    maxBackwardsSpeed: 8
     slopeSpeedMultiplier:
       serializedVersion: 2
       m_Curve:
@@ -1358,7 +1414,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 67164945379c644e49f662d1d99c2af1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1393,7 +1449,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 290536736}
   m_LocalRotation: {x: 0, y: .819152117, z: 0, w: .573576331}
-  m_LocalPosition: {x: 161.768402, y: 7.04114914, z: -62.4342041}
+  m_LocalPosition: {x: 161.768402, y: 1.98000002, z: -62.4342041}
   m_LocalScale: {x: .800000012, y: 1, z: .800000012}
   m_Children:
   - {fileID: 1641060120}
@@ -2747,6 +2803,7 @@ GameObject:
   - 33: {fileID: 611245570}
   - 23: {fileID: 611245569}
   - 95: {fileID: 611245568}
+  - 64: {fileID: 611245571}
   m_Layer: 0
   m_Name: Street1LaneTurn90Deg
   m_TagString: Untagged
@@ -2811,6 +2868,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 785056065}
   m_GameObject: {fileID: 611245566}
+  m_Mesh: {fileID: 4300000, guid: 7e92c2f1802b28d49b5201eb62230746, type: 3}
+--- !u!64 &611245571
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611245566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 7e92c2f1802b28d49b5201eb62230746, type: 3}
 --- !u!1001 &621047093
 Prefab:
@@ -3553,6 +3623,7 @@ GameObject:
   - 33: {fileID: 877297490}
   - 23: {fileID: 877297489}
   - 95: {fileID: 877297488}
+  - 64: {fileID: 877297491}
   m_Layer: 0
   m_Name: Street1Lane30m
   m_TagString: Untagged
@@ -3617,6 +3688,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1144973424}
   m_GameObject: {fileID: 877297486}
+  m_Mesh: {fileID: 4300000, guid: 78613a3680295b4419a1b2326caf113c, type: 3}
+--- !u!64 &877297491
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 877297486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 78613a3680295b4419a1b2326caf113c, type: 3}
 --- !u!1 &898483313
 GameObject:
@@ -4446,6 +4530,7 @@ GameObject:
   - 33: {fileID: 1123922323}
   - 23: {fileID: 1123922322}
   - 95: {fileID: 1123922321}
+  - 64: {fileID: 1123922324}
   m_Layer: 0
   m_Name: Street1Lane40m
   m_TagString: Untagged
@@ -4510,6 +4595,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1788789057}
   m_GameObject: {fileID: 1123922319}
+  m_Mesh: {fileID: 4300000, guid: 296a69cc6c3331248a118e9dc19ced56, type: 3}
+--- !u!64 &1123922324
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123922319}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 296a69cc6c3331248a118e9dc19ced56, type: 3}
 --- !u!1 &1126612622
 GameObject:
@@ -4580,6 +4678,7 @@ GameObject:
   - 33: {fileID: 1127022225}
   - 23: {fileID: 1127022224}
   - 95: {fileID: 1127022223}
+  - 64: {fileID: 1127022226}
   m_Layer: 0
   m_Name: Street1LaneTurn90Deg
   m_TagString: Untagged
@@ -4645,6 +4744,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1697328521}
   m_GameObject: {fileID: 1127022221}
   m_Mesh: {fileID: 4300000, guid: 7e92c2f1802b28d49b5201eb62230746, type: 3}
+--- !u!64 &1127022226
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127022221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 7e92c2f1802b28d49b5201eb62230746, type: 3}
 --- !u!1 &1131421629
 GameObject:
   m_ObjectHideFlags: 0
@@ -4656,6 +4768,7 @@ GameObject:
   - 33: {fileID: 1131421632}
   - 23: {fileID: 1131421631}
   - 95: {fileID: 1131421630}
+  - 64: {fileID: 1131421634}
   m_Layer: 0
   m_Name: Street1Lane90m
   m_TagString: Untagged
@@ -4721,6 +4834,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2057664693}
   m_RootOrder: 13
+--- !u!64 &1131421634
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131421629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 3b37530772fbbb441b40078e356e44b3, type: 3}
 --- !u!1 &1140595171
 GameObject:
   m_ObjectHideFlags: 0
@@ -5258,6 +5384,7 @@ GameObject:
   - 33: {fileID: 1240093962}
   - 23: {fileID: 1240093961}
   - 95: {fileID: 1240093960}
+  - 64: {fileID: 1240093963}
   m_Layer: 0
   m_Name: Street1LaneTurn90Deg
   m_TagString: Untagged
@@ -5323,6 +5450,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1853144038}
   m_GameObject: {fileID: 1240093958}
   m_Mesh: {fileID: 4300000, guid: 7e92c2f1802b28d49b5201eb62230746, type: 3}
+--- !u!64 &1240093963
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1240093958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 7e92c2f1802b28d49b5201eb62230746, type: 3}
 --- !u!1 &1240151238
 GameObject:
   m_ObjectHideFlags: 0
@@ -5334,6 +5474,7 @@ GameObject:
   - 33: {fileID: 1240151242}
   - 23: {fileID: 1240151241}
   - 95: {fileID: 1240151240}
+  - 64: {fileID: 1240151243}
   m_Layer: 0
   m_Name: Street1Lane30m
   m_TagString: Untagged
@@ -5398,6 +5539,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1920793504}
   m_GameObject: {fileID: 1240151238}
+  m_Mesh: {fileID: 4300000, guid: 78613a3680295b4419a1b2326caf113c, type: 3}
+--- !u!64 &1240151243
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1240151238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 78613a3680295b4419a1b2326caf113c, type: 3}
 --- !u!1 &1258830724
 GameObject:
@@ -5481,8 +5635,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1278864546}
+  - 111: {fileID: 1278864547}
   m_Layer: 0
-  m_Name: LandingPad
+  m_Name: SimpleLandingPad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5503,8 +5658,23 @@ Transform:
   - {fileID: 853773396}
   - {fileID: 2058375055}
   - {fileID: 573801018}
+  - {fileID: 1865325379}
   m_Father: {fileID: 1060633980}
   m_RootOrder: 1
+--- !u!111 &1278864547
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1278864545}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1280684322
 GameObject:
   m_ObjectHideFlags: 0
@@ -7803,7 +7973,7 @@ GameObject:
   - 65: {fileID: 1699258825}
   - 23: {fileID: 1699258824}
   m_Layer: 0
-  m_Name: Base
+  m_Name: UpperBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7821,7 +7991,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 41d99dc71bddd8849b22429d49565e49, type: 2}
+  - {fileID: 2100000, guid: 3c052b5c8e6f5f9478f8e1b57994edd7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7855,7 +8025,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1699258823}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 33.634758, y: .030960083, z: -3.75956726}
+  m_LocalPosition: {x: 33.634758, y: 0, z: -3.75956726}
   m_LocalScale: {x: 120, y: 1, z: 80}
   m_Children: []
   m_Father: {fileID: 1278864546}
@@ -7871,6 +8041,7 @@ GameObject:
   - 33: {fileID: 1714745738}
   - 23: {fileID: 1714745737}
   - 95: {fileID: 1714745736}
+  - 64: {fileID: 1714745739}
   m_Layer: 0
   m_Name: Street1LaneTurn90Deg
   m_TagString: Untagged
@@ -7935,6 +8106,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1731772807}
   m_GameObject: {fileID: 1714745734}
+  m_Mesh: {fileID: 4300000, guid: 7e92c2f1802b28d49b5201eb62230746, type: 3}
+--- !u!64 &1714745739
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1714745734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 7e92c2f1802b28d49b5201eb62230746, type: 3}
 --- !u!1001 &1731772807
 Prefab:
@@ -8349,6 +8533,75 @@ Prefab:
   m_RootGameObject: {fileID: 1240093958}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1865325378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1865325379}
+  - 33: {fileID: 1865325382}
+  - 65: {fileID: 1865325381}
+  - 23: {fileID: 1865325380}
+  m_Layer: 0
+  m_Name: LowerBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1865325379
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865325378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.634758, y: 0, z: -3.75956821}
+  m_LocalScale: {x: 81, y: .5, z: 121}
+  m_Children: []
+  m_Father: {fileID: 1278864546}
+  m_RootOrder: 5
+--- !u!23 &1865325380
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865325378}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 3c052b5c8e6f5f9478f8e1b57994edd7, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &1865325381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865325378}
+  m_Material: {fileID: 13400000, guid: 67db31eead11e8d6d00011d98d76c639, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1865325382
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865325378}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1892352117
 GameObject:
   m_ObjectHideFlags: 0
@@ -9296,6 +9549,7 @@ GameObject:
   - 33: {fileID: 2127465449}
   - 23: {fileID: 2127465448}
   - 95: {fileID: 2127465447}
+  - 64: {fileID: 2127465450}
   m_Layer: 0
   m_Name: Street1Lane50m
   m_TagString: Untagged
@@ -9360,6 +9614,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1226312613}
   m_GameObject: {fileID: 2127465445}
+  m_Mesh: {fileID: 4300000, guid: 5e7e4a46119ad774b91921b4751121ce, type: 3}
+--- !u!64 &2127465450
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2127465445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 5e7e4a46119ad774b91921b4751121ce, type: 3}
 --- !u!1 &2143947351
 GameObject:

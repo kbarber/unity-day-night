@@ -29,7 +29,7 @@ public class MainMenuItem : MonoBehaviour
 	{
 		switch (buttonType) {
 		case ButtonTypes.Start:
-			Application.LoadLevel ("Game");
+			Application.LoadLevel ("SpacePort");
 			break;
 		case ButtonTypes.Quit:
 			Application.Quit ();

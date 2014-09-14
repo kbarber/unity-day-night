@@ -22,6 +22,9 @@ public class GetAimedObject : MonoBehaviour
 			} else {
 				objectLabel = null;
 			}
+		} else {
+			objectInteractive = null;
+			objectLabel = null;
 		}
 
 		if (Input.GetKey ("f")) {

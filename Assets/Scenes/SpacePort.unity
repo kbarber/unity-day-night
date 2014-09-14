@@ -1477,8 +1477,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 290536736}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 259.447144, y: 7.0999999, z: -20.9666443}
+  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: 125.125763, y: 2, z: -15.0069427}
   m_LocalScale: {x: .800000012, y: 1, z: .800000012}
   m_Children:
   - {fileID: 1641060120}
@@ -5120,7 +5120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateUniverse: {fileID: 1169839775}
   cameraToAdjust: {fileID: 1931539509}
-  dayColor: {r: .529411793, g: .807843149, b: .921568632, a: 1}
+  dayColor: {r: .652016521, g: .669117689, b: .491998285, a: 1}
   nightColor: {r: 0, g: 0, b: 0, a: 1}
   nightSkybox: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
   daySkybox: {fileID: 0}
@@ -8834,7 +8834,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .432093412, g: .432093412, b: .816176474, a: .0196078438}
+  m_BackGroundColor: {r: .650980413, g: .670588255, b: .490196079, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -8894,7 +8894,7 @@ Skybox:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1931539505}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
+  m_CustomSkybox: {fileID: 0}
 --- !u!114 &1931539514
 MonoBehaviour:
   m_ObjectHideFlags: 0

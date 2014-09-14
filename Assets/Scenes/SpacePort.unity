@@ -6531,9 +6531,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1382419311}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23b7e1a52c5914ec3b7303568c9d1176, type: 3}
+  m_Script: {fileID: 11500000, guid: bb86042b1197b4f9fb25a94e62aa4ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Space
 --- !u!1 &1429632721
 GameObject:
   m_ObjectHideFlags: 0

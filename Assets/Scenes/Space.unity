@@ -223,6 +223,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1886311009}
   m_RootOrder: 2
+--- !u!1 &284272661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 284272662}
+  - 114: {fileID: 284272664}
+  - 114: {fileID: 284272663}
+  m_Layer: 0
+  m_Name: HUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &284272662
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284272661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1886311009}
+  m_RootOrder: 4
+--- !u!114 &284272663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284272661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ff4db53d7fa48599e1a11a690cbbaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getAimedObjectHandler: {fileID: 1236331276}
+  aimedLabel: 
+--- !u!114 &284272664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284272661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec70ea62423844919d92818842be902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshairTexture: {fileID: 2800000, guid: 1eb770a7a48f849fe917512549553b5b, type: 3}
+  visible: 1
 --- !u!1 &509006177
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +404,7 @@ GameObject:
   - 33: {fileID: 523112719}
   - 135: {fileID: 523112718}
   - 23: {fileID: 523112717}
+  - 114: {fileID: 523112721}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -407,6 +463,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &523112721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 523112716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe1530b33e234074a2c46d8058efa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: Moon
 --- !u!1 &647930898
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +486,8 @@ GameObject:
   - 33: {fileID: 647930901}
   - 135: {fileID: 647930900}
   - 23: {fileID: 647930899}
+  - 114: {fileID: 647930904}
+  - 114: {fileID: 647930903}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Untagged
@@ -476,6 +546,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &647930903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647930898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb86042b1197b4f9fb25a94e62aa4ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: SpacePort
+--- !u!114 &647930904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647930898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe1530b33e234074a2c46d8058efa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: Planet
 --- !u!1 &1236331269
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +583,7 @@ GameObject:
   - 124: {fileID: 1236331271}
   - 81: {fileID: 1236331270}
   - 45: {fileID: 1236331275}
+  - 114: {fileID: 1236331276}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -569,6 +664,20 @@ Skybox:
   m_GameObject: {fileID: 1236331269}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
+--- !u!114 &1236331276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236331269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979af3581faf14d709852f3c038c0dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectHit: {fileID: 0}
+  objectInteractive: {fileID: 0}
+  objectLabel: 
 --- !u!1 &1362939631
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +931,7 @@ Transform:
   - {fileID: 1362939632}
   - {fileID: 151649119}
   - {fileID: 1236331274}
+  - {fileID: 284272662}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!95 &1886311010

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("DN/Light Action")]
+[AddComponentMenu("DN/Action/Light Action")]
 public class LightAction : MonoBehaviour
 {
 	// Source of light

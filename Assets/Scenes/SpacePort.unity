@@ -168,11 +168,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5089170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 927f0dc98600f41e88fbfbdb3033c368, type: 3}
+  m_Script: {fileID: 11500000, guid: a8c0b0546fb5546cc82b2cb555667baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorHinge: {fileID: 1202881646}
-  doorOpen: 1
+  forwardTo: {fileID: 1202881646}
 --- !u!1 &19327315
 GameObject:
   m_ObjectHideFlags: 0
@@ -5214,6 +5213,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1202881646}
+  - 114: {fileID: 1202881647}
   m_Layer: 0
   m_Name: DoorHinge
   m_TagString: Untagged
@@ -5234,6 +5234,18 @@ Transform:
   - {fileID: 5089171}
   m_Father: {fileID: 115502934}
   m_RootOrder: 3
+--- !u!114 &1202881647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202881645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927f0dc98600f41e88fbfbdb3033c368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: 1
 --- !u!1 &1223253388
 GameObject:
   m_ObjectHideFlags: 0

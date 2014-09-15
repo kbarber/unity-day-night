@@ -418,6 +418,7 @@ GameObject:
   - 135: {fileID: 523112718}
   - 23: {fileID: 523112717}
   - 114: {fileID: 523112721}
+  - 114: {fileID: 523112722}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -488,6 +489,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: Moon
+--- !u!114 &523112722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 523112716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb86042b1197b4f9fb25a94e62aa4ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Moon
 --- !u!1 &647930898
 GameObject:
   m_ObjectHideFlags: 0

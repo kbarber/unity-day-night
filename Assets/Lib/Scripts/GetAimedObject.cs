@@ -5,12 +5,21 @@ using System.Collections;
 [RequireComponent (typeof(Camera))]
 public class GetAimedObject : MonoBehaviour
 {
+	[Header("Read-only settings")]
 
-	public Transform objectHit;
-	public InteractiveGameObject objectInteractive;
-	public string objectLabel;
-	
-	void Update ()
+	[Tooltip("RO: The object have focus on.")]
+	public Transform
+		objectHit;
+
+	[Tooltip("RO: The corresponding interactive object component of the object.")]
+	public InteractiveGameObject
+		objectInteractive;
+
+	[Tooltip("RO: The label of the interactive object we are focusing on.")]
+	public string
+		objectLabel;
+
+	private void RayCastForObject ()
 	{
 		RaycastHit hit;
 		Ray ray = camera.ScreenPointToRay (new Vector3 (camera.pixelWidth / 2, camera.pixelHeight / 2, 0));
@@ -26,11 +35,18 @@ public class GetAimedObject : MonoBehaviour
 			objectInteractive = null;
 			objectLabel = null;
 		}
+	}
 
-		if (Input.GetKey ("f")) {
-			if (objectInteractive) {
-				objectInteractive.SendMessage ("doAction");
-			}
+	private void DoActionOnObject ()
+	{
+		if (objectInteractive && Input.GetKey ("f")) {
+			objectInteractive.SendMessage ("DoAction");
 		}
+	}
+	
+	void Update ()
+	{
+		RayCastForObject ();
+		DoActionOnObject ();
 	}
 }

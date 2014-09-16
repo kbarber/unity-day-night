@@ -4,9 +4,11 @@ using System.Collections;
 [AddComponentMenu("DN/Action/Switch To Scene Action")]
 public class SwitchToSceneAction : MonoBehaviour
 {
-	public string sceneName;
+	[Tooltip("Name of scene to load.")]
+	public string
+		sceneName;
 
-	void doAction ()
+	void DoAction ()
 	{
 		Application.LoadLevel (sceneName);
 	}

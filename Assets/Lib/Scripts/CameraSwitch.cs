@@ -4,10 +4,15 @@ using System.Collections;
 [AddComponentMenu("DN/Camera Switch")]
 public class CameraSwitch : MonoBehaviour
 {
-	public Camera[] cameras;
-	public int activeCamera;
+	[Tooltip("Camera to include in switching.")]
+	public Camera[]
+		cameras;
 
-	void switchCamera (int index)
+	[Tooltip("Index of active camera.")]
+	public int
+		activeCamera;
+
+	private void SwitchCamera (int index)
 	{
 		for (int i = 0; i < cameras.Length; i++) {
 			if (i == index) {
@@ -20,7 +25,7 @@ public class CameraSwitch : MonoBehaviour
 
 	void Start ()
 	{
-		switchCamera (activeCamera);
+		SwitchCamera (activeCamera);
 	}
 	
 	void Update ()
@@ -31,6 +36,6 @@ public class CameraSwitch : MonoBehaviour
 		if (Input.GetKey ("v")) {
 			activeCamera = 1;
 		}
-		switchCamera (activeCamera);
+		SwitchCamera (activeCamera);
 	}
 }

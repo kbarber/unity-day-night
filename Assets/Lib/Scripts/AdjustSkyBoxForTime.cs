@@ -4,12 +4,29 @@ using System.Collections;
 [AddComponentMenu("DN/Adjust Sky Box for Time")]
 public class AdjustSkyBoxForTime : MonoBehaviour
 {
-	public RotateUniverse rotateUniverse;
-	public Camera cameraToAdjust;
-	public Color dayColor = new Color (135, 206, 235);
-	public Color nightColor = new Color (0, 0, 0);
-	public Material nightSkybox;
-	public Material daySkybox;
+	[Tooltip("RotateUniverse object for time reference.")]
+	public RotateUniverse
+		rotateUniverse;
+
+	[Tooltip("Camera object to focus on.")]
+	public Camera
+		cameraToAdjust;
+
+	[Tooltip("Color for the day sky.")]
+	public Color
+		dayColor = new Color (135, 206, 235);
+
+	[Tooltip("Color for the night sky.")]
+	public Color
+		nightColor = new Color (0, 0, 0);
+
+	[Tooltip("Skybox for the day sky.")]
+	public Material
+		nightSkybox;
+
+	[Tooltip("Skybox for the night sky.")]
+	public Material
+		daySkybox;
 
 	private Color SkyBoxColor (bool day)
 	{
@@ -29,7 +46,7 @@ public class AdjustSkyBoxForTime : MonoBehaviour
 		}
 	}
 
-	void updateSkyBox ()
+	void UpdateSkyBox ()
 	{
 		cameraToAdjust.backgroundColor = SkyBoxColor (rotateUniverse.isDay);
 		Skybox skybox = cameraToAdjust.GetComponent<Skybox> ();
@@ -37,16 +54,14 @@ public class AdjustSkyBoxForTime : MonoBehaviour
 			skybox.material = SkyboxMaterial (rotateUniverse.isDay);
 		}
 	}
-
-	// Use this for initialization
+	
 	void Start ()
 	{
-		updateSkyBox ();
+		UpdateSkyBox ();
 	}
-	
-	// Update is called once per frame
+
 	void Update ()
 	{
-		updateSkyBox ();
+		UpdateSkyBox ();
 	}
 }

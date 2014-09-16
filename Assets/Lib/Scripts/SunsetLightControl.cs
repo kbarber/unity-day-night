@@ -10,7 +10,7 @@ public class SunsetLightControl : MonoBehaviour
 	public int
 		yAxisTrigger = 0;
 
-	private void adjustLight ()
+	private void AdjustLight ()
 	{
 		if (transform.position.y > yAxisTrigger) {
 			light.enabled = true;
@@ -21,11 +21,11 @@ public class SunsetLightControl : MonoBehaviour
 
 	void Start ()
 	{
-		adjustLight ();
+		AdjustLight ();
 	}
 	
 	void Update ()
 	{
-		adjustLight ();
+		AdjustLight ();
 	}
 }

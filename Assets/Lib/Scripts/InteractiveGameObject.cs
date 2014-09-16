@@ -4,5 +4,7 @@ using System.Collections;
 [AddComponentMenu("DN/Interactive Game Object")]
 public class InteractiveGameObject : MonoBehaviour
 {
-	public string label;
+	[Tooltip("Label of object.")]
+	public string
+		label;
 }

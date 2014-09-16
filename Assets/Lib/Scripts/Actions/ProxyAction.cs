@@ -8,8 +8,8 @@ public class ProxyAction : MonoBehaviour
 	public Transform
 		forwardTo;
 
-	void doAction ()
+	void DoAction ()
 	{
-		forwardTo.SendMessage ("doAction");
+		forwardTo.SendMessage ("DoAction");
 	}
 }

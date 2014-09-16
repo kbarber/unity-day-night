@@ -4,23 +4,22 @@ using System.Collections;
 [AddComponentMenu("DN/Look At")]
 public class LookAt : MonoBehaviour
 {
-
 	[Tooltip("Target transform to look at.")]
 	public Transform
 		target;
 
-	void lookAt (Transform t)
+	void LookAtTarget (Transform t)
 	{
 		transform.LookAt (t);
 	}
 
 	void Start ()
 	{
-		lookAt (target);
+		LookAtTarget (target);
 	}
 	
 	void LateUpdate ()
 	{
-		lookAt (target);
+		LookAtTarget (target);
 	}
 }

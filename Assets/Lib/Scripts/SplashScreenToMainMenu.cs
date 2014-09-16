@@ -5,8 +5,10 @@ using System.Collections;
 [RequireComponent (typeof(GUITexture))]
 public class SplashScreenToMainMenu : MonoBehaviour
 {
-
-	public float timeToWait = 3.0f;
+	[Tooltip("Time to wait before loading main menu.")]
+	[Range(0f, 100f)]
+	public float
+		timeToWait = 3.0f;
 
 	IEnumerator WaitCoroutine ()
 	{

@@ -10,28 +10,28 @@ public class DoorHingeAction : MonoBehaviour
 	public bool
 		doorOpen = true;
 
-	void closeDoor ()
+	void CloseDoor ()
 	{
 		print ("Closing door");
 		transform.Rotate (new Vector3 (0, 90, 0));
 		doorOpen = false;
 	}
 
-	void openDoor ()
+	void OpenDoor ()
 	{
 		print ("Opening door");
 		transform.Rotate (new Vector3 (0, -90, 0));
 		doorOpen = true;
 	}
 
-	void doAction ()
+	void DoAction ()
 	{
 		if (doorOpen) {
 			/* Door is opened, close it */
-			closeDoor ();
+			CloseDoor ();
 		} else {
 			/* Door is closed, open it */
-			openDoor ();
+			OpenDoor ();
 		}
 	}
 }

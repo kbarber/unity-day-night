@@ -1,27 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("DN/GUI Current Object")]
+[AddComponentMenu("DN/GUI/Current Object")]
 public class GUICurrentObject : MonoBehaviour
 {
+	[Tooltip("Link to the GetAimedObject component.")]
+	public GetAimedObject
+		getAimedObjectHandler;
 
-	public GetAimedObject getAimedObjectHandler;
+	[Header("Read-only settings")]
 
-	// RO: current aimedLabel
-	public string aimedLabel;
+	[Tooltip("RO: The label of the object we have focus on.")]
+	public string
+		aimedLabel;
 
-	// Use this for initialization
-	void Start ()
-	{
-	
-	}
-	
-	// Update is called once per frame
-	void OnGUI ()
+	private void DrawLabel ()
 	{
 		aimedLabel = getAimedObjectHandler.objectLabel;
 		if (aimedLabel != null) {
-			GUI.Box (new Rect (10, 10, 100, 25), aimedLabel);
+			GUI.Box (new Rect (10, 10, 150, 25), aimedLabel);
 		}
+	}
+
+	void OnGUI ()
+	{
+		DrawLabel ();
 	}
 }

@@ -10,17 +10,36 @@ public class ShipControl : MonoBehaviour
 		MouseX = 1,
 		MouseY = 2
 	}
-	public RotationAxes axes = RotationAxes.MouseXAndY;
-	public float sensitivityX = 15F;
-	public float sensitivityY = 15F;
-	
-	public float minimumX = -360F;
-	public float maximumX = 360F;
-	
-	public float minimumY = -60F;
-	public float maximumY = 60F;
-	
-	float rotationY = 0F;
+
+	[Tooltip("Axes of rotation.")]
+	public RotationAxes
+		axes = RotationAxes.MouseXAndY;
+
+	[Tooltip("X Sensitivity.")]
+	public float
+		sensitivityX = 15F;
+
+	[Tooltip("Y Sensitivity.")]
+	public float
+		sensitivityY = 15F;
+
+	[Tooltip("X Minimum.")]
+	public float
+		minimumX = -360F;
+	[Tooltip("X Maximum.")]
+	public float
+		maximumX = 360F;
+
+	[Tooltip("Y Minimum.")]
+	public float
+		minimumY = -60F;
+	[Tooltip("Y Maximum.")]
+	public float
+		maximumY = 60F;
+
+	[Tooltip("Y Rotation.")]
+	float
+		rotationY = 0F;
 	
 	void Update ()
 	{

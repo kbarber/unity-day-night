@@ -44,7 +44,7 @@ public class RotateUniverse : MonoBehaviour
 		return Mathf.RoundToInt ((maxTime * startTime) + rotationCalc) % maxTime;
 	}
 
-	private static bool calcDay (float currentTime, int maxTime)
+	private static bool CalcDay (float currentTime, int maxTime)
 	{
 		if (currentTime < (maxTime / 2f)) {
 			return true;
@@ -56,7 +56,7 @@ public class RotateUniverse : MonoBehaviour
 	private void UpdateWorldTime ()
 	{
 		worldTime = RotationToWorldTime (transform.rotation.eulerAngles.z, maximumTimeScale, startingPercent);
-		isDay = calcDay (worldTime, maximumTimeScale);
+		isDay = CalcDay (worldTime, maximumTimeScale);
 	}
 
 	void Start ()

@@ -11,7 +11,7 @@ public class LightAction : MonoBehaviour
 	public bool
 		lightOn = true;
 
-	void doAction ()
+	void DoAction ()
 	{
 		print ("Light Action");
 		if (lightOn) {

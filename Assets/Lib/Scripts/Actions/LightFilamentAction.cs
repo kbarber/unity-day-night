@@ -19,7 +19,7 @@ public class LightFilamentAction : MonoBehaviour
 	public bool
 		filamentOn = true;
 
-	void doAction ()
+	void DoAction ()
 	{
 		if (filamentOn) {
 			renderer.material = offMaterial;

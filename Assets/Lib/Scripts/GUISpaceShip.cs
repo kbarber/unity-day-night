@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[AddComponentMenu("DN/GUI/Space Ship")]
 public class GUISpaceShip : MonoBehaviour
 {
+	[Header("Read-only settings")]
 
-	public int enginePower = 0;
+	[Tooltip("RO: Current engine power.")]
+	public int
+		enginePower = 0;
 
-	void OnGUI ()
+	private void AdjustEnginePower ()
 	{
 		float axis = Input.GetAxis ("Vertical");
 		if ((axis > 0) && enginePower < 100) {
@@ -15,5 +19,11 @@ public class GUISpaceShip : MonoBehaviour
 			enginePower--;
 		}
 		GUI.Box (new Rect (10, 45, 120, 25), "Engine Power: " + enginePower);
+
+	}
+
+	void OnGUI ()
+	{
+		AdjustEnginePower ();
 	}
 }

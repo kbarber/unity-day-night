@@ -1,17 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("DN/GUI Cross Hair")]
+[AddComponentMenu("DN/GUI/Cross Hair")]
 public class GUICrossHair : MonoBehaviour
 {
-	// Texture to draw as a cross hair
-	public Texture crosshairTexture;
+	[Tooltip("Texture to draw as a cross hair.")]
+	public Texture
+		crosshairTexture;
 
-	// RO Position in the GUI for the crosshair.
-	private Rect position;
+	[Tooltip("Is cross hair visible?")]
+	public bool
+		visible = true;
+	
+	[Header("Read-only settings")]
 
-	// Use to make cross hair visible
-	public bool visible = true;
+	[Tooltip("RO: Position in the GUI for the crosshair.")]
+	public Rect
+		position;
 
 	void Update ()
 	{

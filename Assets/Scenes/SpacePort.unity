@@ -3124,6 +3124,7 @@ GameObject:
   - 4: {fileID: 689098473}
   - 108: {fileID: 689098475}
   - 114: {fileID: 689098474}
+  - 114: {fileID: 689098476}
   m_Layer: 0
   m_Name: MoonLight
   m_TagString: Untagged
@@ -3190,6 +3191,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &689098476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 689098472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f64c2155f35414aaf7513a82e0447f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yAxisTrigger: 0
 --- !u!1 &728709152
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,6 +4066,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 990175227}
   - 108: {fileID: 990175226}
+  - 114: {fileID: 990175228}
   m_Layer: 0
   m_Name: Point light
   m_TagString: Untagged
@@ -4107,6 +4121,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1316149731}
   m_RootOrder: 0
+--- !u!114 &990175228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990175225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5485357be4864b598cc8e80c8196e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightOn: 1
 --- !u!1 &994632237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5080,7 +5106,6 @@ GameObject:
   - 4: {fileID: 1169839774}
   - 114: {fileID: 1169839775}
   - 114: {fileID: 1169839776}
-  - 114: {fileID: 1169839777}
   m_Layer: 0
   m_Name: SunRotationCentre
   m_TagString: Untagged
@@ -5135,19 +5160,6 @@ MonoBehaviour:
   nightColor: {r: 0, g: 0, b: 0, a: 1}
   nightSkybox: {fileID: 2100000, guid: 5aab239cac7fe8a4c931693a7535da5c, type: 2}
   daySkybox: {fileID: 0}
---- !u!114 &1169839777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1169839773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 678546467fe7542dd89efe8c9465555b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sunLight: {fileID: 1291003484}
-  rotateUniverse: {fileID: 1169839775}
 --- !u!1 &1201492536
 GameObject:
   m_ObjectHideFlags: 0
@@ -5791,6 +5803,7 @@ GameObject:
   - 4: {fileID: 1291003485}
   - 108: {fileID: 1291003484}
   - 114: {fileID: 1291003486}
+  - 114: {fileID: 1291003487}
   m_Layer: 0
   m_Name: SunLight
   m_TagString: Untagged
@@ -5857,6 +5870,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1169839774}
+--- !u!114 &1291003487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291003483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f64c2155f35414aaf7513a82e0447f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yAxisTrigger: 0
 --- !u!1 &1291403727
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,11 +6191,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1316149727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5485357be4864b598cc8e80c8196e8b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8c0b0546fb5546cc82b2cb555667baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightSource: {fileID: 990175226}
-  lightOn: 0
+  forwardTo: {fileID: 990175227}
 --- !u!1 &1340366145
 GameObject:
   m_ObjectHideFlags: 0
@@ -9287,7 +9311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5485357be4864b598cc8e80c8196e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightSource: {fileID: 1798192017}
   lightOn: 0
 --- !u!114 &2091763882
 MonoBehaviour:

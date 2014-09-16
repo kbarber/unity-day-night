@@ -5,21 +5,22 @@ using System.Collections;
 public class LookAt : MonoBehaviour
 {
 
-	// Target object to look at
-	public Transform target;
+	[Tooltip("Target transform to look at.")]
+	public Transform
+		target;
 
-	void DoLookAt ()
+	void lookAt (Transform t)
 	{
-		transform.LookAt (target);
+		transform.LookAt (t);
 	}
 
 	void Start ()
 	{
-		DoLookAt ();
+		lookAt (target);
 	}
 	
 	void LateUpdate ()
 	{
-		DoLookAt ();
+		lookAt (target);
 	}
 }

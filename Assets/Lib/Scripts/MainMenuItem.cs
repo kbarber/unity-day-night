@@ -12,8 +12,9 @@ public class MainMenuItem : MonoBehaviour
 		Quit
 	}
 
-	// Select the type of button that is represented by this GUITexture
-	public ButtonTypes buttonType = ButtonTypes.Start;
+	[Tooltip("The button type that is represented by this GUITexture.")]
+	public ButtonTypes
+		buttonType = ButtonTypes.Start;
 	
 	void OnMouseOver ()
 	{

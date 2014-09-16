@@ -4,7 +4,9 @@ using System.Collections;
 [AddComponentMenu("DN/Action/Proxy Action")]
 public class ProxyAction : MonoBehaviour
 {
-	public Transform forwardTo;
+	[Tooltip("Forward action requests to this transform.")]
+	public Transform
+		forwardTo;
 
 	void doAction ()
 	{

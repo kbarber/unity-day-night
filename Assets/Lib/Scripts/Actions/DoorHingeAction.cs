@@ -4,22 +4,34 @@ using System.Collections;
 [AddComponentMenu("DN/Action/Door Hinge Action")]
 public class DoorHingeAction : MonoBehaviour
 {
-	/* false = closed, true = open */
-	public bool doorOpen = true;
+	[Header("Read-only settings")]
 
-	/* Open door */
+	[Tooltip("RO: Is the door open or closed?")]
+	public bool
+		doorOpen = true;
+
+	void closeDoor ()
+	{
+		print ("Closing door");
+		transform.Rotate (new Vector3 (0, 90, 0));
+		doorOpen = false;
+	}
+
+	void openDoor ()
+	{
+		print ("Opening door");
+		transform.Rotate (new Vector3 (0, -90, 0));
+		doorOpen = true;
+	}
+
 	void doAction ()
 	{
 		if (doorOpen) {
 			/* Door is opened, close it */
-			print ("Closing door");
-			transform.Rotate (new Vector3 (0, 90, 0));
-			doorOpen = false;
+			closeDoor ();
 		} else {
 			/* Door is closed, open it */
-			print ("Opening door");
-			transform.Rotate (new Vector3 (0, -90, 0));
-			doorOpen = true;
+			openDoor ();
 		}
 	}
 }

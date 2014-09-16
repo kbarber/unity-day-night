@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[AddComponentMenu("DN/Adjust Sky Box for Time")]
 public class AdjustSkyBoxForTime : MonoBehaviour
 {
 	public RotateUniverse rotateUniverse;

@@ -2,11 +2,9 @@
 using System.Collections;
 
 [AddComponentMenu("DN/Action/Light Action")]
+[RequireComponent (typeof(Light))]
 public class LightAction : MonoBehaviour
 {
-	// Source of light
-	public Light lightSource;
-
 	// RO: Light off or on?
 	public bool lightOn = true;
 
@@ -15,10 +13,10 @@ public class LightAction : MonoBehaviour
 	{
 		print ("Light Action");
 		if (lightOn) {
-			lightSource.enabled = false;
+			light.enabled = false;
 			lightOn = false;
 		} else {
-			lightSource.enabled = true;
+			light.enabled = true;
 			lightOn = true;
 		}
 	}

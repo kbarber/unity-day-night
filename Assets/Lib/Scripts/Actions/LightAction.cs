@@ -5,10 +5,12 @@ using System.Collections;
 [RequireComponent (typeof(Light))]
 public class LightAction : MonoBehaviour
 {
-	// RO: Light off or on?
-	public bool lightOn = true;
+	[Header("Read-only settings")]
+	
+	[Tooltip("RO: Is the light on?")]
+	public bool
+		lightOn = true;
 
-	// Turn off/on light
 	void doAction ()
 	{
 		print ("Light Action");

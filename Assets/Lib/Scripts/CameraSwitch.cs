@@ -8,7 +8,9 @@ public class CameraSwitch : MonoBehaviour
 	public Camera[]
 		cameras;
 
-	[Tooltip("Index of active camera.")]
+	[Header("Read-only settings")]
+
+	[Tooltip("RO: Index of active camera.")]
 	public int
 		activeCamera;
 

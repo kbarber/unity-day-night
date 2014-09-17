@@ -1629,7 +1629,7 @@ Transform:
   m_PrefabInternal: {fileID: 1933353703}
   m_GameObject: {fileID: 290536736}
   m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -.536491394, y: 2, z: -15.006958}
+  m_LocalPosition: {x: 85.9425888, y: 2, z: -15.0069475}
   m_LocalScale: {x: .800000012, y: 1, z: .800000012}
   m_Children:
   - {fileID: 1641060120}
@@ -3848,6 +3848,54 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 826988594}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &828348433
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 89.8572617
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.01000023
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -26.3291588
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+      propertyPath: sceneName
+      value: Sandbox
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+  m_RootGameObject: {fileID: 1804787092}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &853773395
 GameObject:
   m_ObjectHideFlags: 0
@@ -8757,8 +8805,8 @@ Prefab:
 --- !u!1 &1804787092
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 100000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+  m_PrefabInternal: {fileID: 828348433}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1804787097}
@@ -8767,6 +8815,7 @@ GameObject:
   - 23: {fileID: 1804787094}
   - 54: {fileID: 1804787093}
   - 114: {fileID: 1804787098}
+  - 114: {fileID: 1804787099}
   m_Layer: 0
   m_Name: ObeliskTeleporter
   m_TagString: Untagged
@@ -8777,8 +8826,9 @@ GameObject:
 --- !u!54 &1804787093
 Rigidbody:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 5400000, guid: 60fb8fd8598d345e098ea3f6380b27f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 828348433}
   m_GameObject: {fileID: 1804787092}
   serializedVersion: 2
   m_Mass: 1
@@ -8792,8 +8842,9 @@ Rigidbody:
 --- !u!23 &1804787094
 Renderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 2300000, guid: 60fb8fd8598d345e098ea3f6380b27f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 828348433}
   m_GameObject: {fileID: 1804787092}
   m_Enabled: 1
   m_CastShadows: 1
@@ -8812,8 +8863,9 @@ Renderer:
 --- !u!65 &1804787095
 BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 6500000, guid: 60fb8fd8598d345e098ea3f6380b27f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 828348433}
   m_GameObject: {fileID: 1804787092}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -8824,15 +8876,16 @@ BoxCollider:
 --- !u!33 &1804787096
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 3300000, guid: 60fb8fd8598d345e098ea3f6380b27f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 828348433}
   m_GameObject: {fileID: 1804787092}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1804787097
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 400000, guid: 60fb8fd8598d345e098ea3f6380b27f8, type: 2}
+  m_PrefabInternal: {fileID: 828348433}
   m_GameObject: {fileID: 1804787092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 89.8572617, y: 5.01000023, z: -26.3291588}
@@ -8843,8 +8896,9 @@ Transform:
 --- !u!114 &1804787098
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 11400000, guid: 60fb8fd8598d345e098ea3f6380b27f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 828348433}
   m_GameObject: {fileID: 1804787092}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -8852,6 +8906,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: Obelisk Teleporter
+--- !u!114 &1804787099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 60fb8fd8598d345e098ea3f6380b27f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 828348433}
+  m_GameObject: {fileID: 1804787092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb86042b1197b4f9fb25a94e62aa4ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Sandbox
 --- !u!1 &1839414106
 GameObject:
   m_ObjectHideFlags: 0
@@ -9529,7 +9596,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: f7252b990769f44458bf0b7fc371ee47, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.536491394
+      value: 85.9425888
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f7252b990769f44458bf0b7fc371ee47, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9537,7 +9604,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f7252b990769f44458bf0b7fc371ee47, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -15.006958
+      value: -15.0069475
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f7252b990769f44458bf0b7fc371ee47, type: 2}
       propertyPath: m_LocalRotation.x

@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Scenes/SpacePort.unity
   - enabled: 1
     path: Assets/Scenes/Moon.unity
+  - enabled: 1
+    path: Assets/Scenes/Sandbox.unity
